@@ -93,8 +93,8 @@ makeBookList() */
     }
 }
 
-var fieldset = document.createElement( 'fieldset' );  
-fieldset.setAttribute( 'class' , 'nameOfList' );
+var fieldset = document.createElement( 'fieldset' );  //creates a group
+fieldset.setAttribute( 'class' , 'nameOfList' ); //adds a class to the group
 
 var legend = document.createElement( 'legend' );    
 legend.innerHTML = 'My Book List';  
@@ -102,7 +102,7 @@ fieldset.appendChild(legend);
 
 function makeBookList(){
     const ul = document.createElement('ul'); // creates the unord list
-    const myBooks = Object.keys(nameOfList)
+    const myBooks = Object.keys(nameOfList) //turns object into array (ie gives index)
     
     
     const div = document.createElement('div'); //creates the div
@@ -111,26 +111,26 @@ function makeBookList(){
     const h1third = document.createElement('h1'); // creates author h1
     document.getElementsByTagName('body')[0].appendChild(div); //add the div to the body tag
     div.appendChild(ul); //adds the ul to the div
-    const img = document.createElement('img');
+    const img = document.createElement('img'); // creates image
     
     
     
       for( let i = 0; i < myBooks.length; i++){
-        const li =  document.createElement('li');
-        const li2 = document.createElement('li');
-        var bookImage = document.createElement( 'img' );
-        const h2 = document.createElement('h2');
-        const h2second = document.createElement('h2');
+        const li =  document.createElement('li'); //creates list
+        const li2 = document.createElement('li'); //creates 2nd list
+        var bookImage = document.createElement( 'img' ); //creates img
+        const h2 = document.createElement('h2'); //creates h2
+        const h2second = document.createElement('h2'); //creates 2nd h2
         const h1 = document.createElement('h1'); // creates title h1
-        var bookId = myBooks[i];
+        var bookId = myBooks[i]; //creates index of index
        
         const myBook = nameOfList[bookId];
-        h1.innerHTML = myBook.title;
-        h2.innerHTML = ("author");
-        li.innerHTML = myBook.language;
-        h2second.innerHTML = ("language");
-        li2.innerHTML = myBook.author;
-        ul.appendChild(h1second);
+        h1.innerHTML = myBook.title;  //writes h1 to html
+        h2.innerHTML = ("author"); //writes h2 to html author
+        li.innerHTML = myBook.language; //writes property of language to li
+        h2second.innerHTML = ("language"); //writes 2nd h2 to html
+        li2.innerHTML = myBook.author; //writes property of author to li2
+        ul.appendChild(h1second); //below all added to ul
        
         ul.appendChild(h1);
         ul.appendChild(h1third);
@@ -143,12 +143,12 @@ function makeBookList(){
     
 
 
-var bookImage = document.createElement( 'img' );   //Create a img  for the book in the div and give it an attribute
-    bookImage.src = 'img/' + bookTitles[ i ] + '.jpg';
-    bookImage.setAttribute( 'alt' , bookTitles[ i ] );
-    bookImage.setAttribute('height', '300px');
-    bookImage.setAttribute('width', '200px');
-    ul.append( bookImage );
+var bookImage = document.createElement( 'img' );   // creates image
+    bookImage.src = 'img/' + bookTitles[ i ] + '.jpg'; //adds src of book titles array
+    bookImage.setAttribute( 'alt' , bookTitles[ i ] ); // adds alt to image
+    bookImage.setAttribute('height', '300px'); //adds height
+    bookImage.setAttribute('width', '200px');// adds width
+    ul.append( bookImage ); //adds to ul
   
 }
 fieldset.appendChild(div);  
