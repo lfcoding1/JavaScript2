@@ -70,6 +70,6 @@ console.log("SEK " + kronor);
 
 //if currency was in EURO:
 let euro = Number(12250).toLocaleString("en-EUR", {minimumFractionDigits: 2});
-console.log("€ " + euro);
+console.log("Maartjes should earn €" + euro);
 
 
